@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live URL Decryptor</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <input type="text" name="cipher" id="cipher" />
+    <input type="submit" id="submit" />
+
+    <script>
+        $('#submit').click(() => {
+            $.ajax({
+                url: '/',
+                type: 'post',
+                // dataType:'jsonp',
+                contentType: "application/json; charset=utf-8",
+                data: JSON.stringify({
+                    cipher: $('#cipher').val(),
+                }),
+                success: (msg) => {
+                    console.log(msg)
+                }
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>
