@@ -11,6 +11,10 @@ app.get('/', async (req, res) => {
     res.render('index.html')
 })
 
+app.get("/a",(req,res) => {
+    res.send("A")
+})
+
 app.post('/', express.json(), async (req, res) => {
     try {
         const plain = dLib.decrypt(req.body.cipher)

@@ -1,7 +1,7 @@
 {
-  "name": "liveurldecoder",
+  "name": "live-url-decoder",
   "version": "1.0.0",
-  "description": "app",
+  "description": "Live URL Decoder",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
